@@ -2,7 +2,7 @@
 nmap [target]
 
 #If no info returned try:
-( -sS -sU -sY -sN -sF -sX ....)
+( -sS -sU -sY -sN -sF -sX -sT ....)
 
 #IPv6 Scan
 nmap -6 [target]

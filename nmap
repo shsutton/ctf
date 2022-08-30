@@ -36,3 +36,7 @@ nmap -oN outputfile.txt 192.168.1.1
 
 #Basic Script Scan
 nmap -sV -sC 192.168.1.1
+
+#Useful Scans
+sudo nmap -p- 10.10.138.50 --open
+

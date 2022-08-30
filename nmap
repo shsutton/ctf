@@ -1,0 +1,35 @@
+#Basic Scan
+nmap [target]
+
+#IPv6 Scan
+nmap -6 [target]
+
+#Fast Scan
+nmap -F [target]
+
+#Port scans
+nmap -p [port(s)] [target]
+nmap -p 1-65535 [target]
+nmap --top-ports [number] [target]
+
+#Service Version Detection
+nmap -sV [target]
+
+#RPC Scan
+nmap -sR [target]
+
+#TCP Scan
+nmap -sT [target]
+
+#OS Detection
+nmap -A [target]
+
+#Service Detection
+nmap -sV 192.168.1.1
+nmap -sV --version-intensity 5 [target]
+
+#Save Output
+nmap -oN outputfile.txt 192.168.1.1
+
+#Basic Script Scan
+nmap -sV -sC 192.168.1.1

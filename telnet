@@ -1,0 +1,8 @@
+#Simple connections
+telnet [target] [port]
+
+#Connect to URL
+telnet [target].com
+
+#With login name
+telnet -l [username] [target] [port]
